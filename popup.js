@@ -104,7 +104,9 @@ async function loadLinkedInSettings() {
         document.getElementById('likeComments').checked = config.likeComments || false;
     }
     // Add this after the followEnabled handler
-   
+    if (document.getElementById('connectEnabled')) {
+        document.getElementById('connectEnabled').checked = config.connectEnabled || false;
+    }
 }
 
 // Setup event listeners
