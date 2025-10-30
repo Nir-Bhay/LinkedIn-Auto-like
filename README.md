@@ -1,115 +1,86 @@
-﻿# social-auto-liker-pro
-Markdown
+# 🤖 Social Auto-Liker Pro
 
-```
-# 🔗 LinkedIn Auto Extension -- For Learning & Fun
-
-A lightweight browser extension that automates basic interactions on **LinkedIn** (and optionally **Instagram**) --- just for fun, experimentation, and learning.
+A browser extension to automate interactions on **LinkedIn** and **Instagram**, designed for educational and experimental purposes.
 
 ---
 
 ## ✨ Features
 
-- ❤️ Auto-like posts
-- 👥 Auto-connect with users
-- ➕ Auto-follow profiles
-- 💬 Auto-like comments
-- 📸 Bonus: Instagram support
+This extension provides a range of automation features for both LinkedIn and Instagram, all configurable from the extension popup.
 
-> ⚠️ This is **not** a spam tool or mass automation bot. It's built as a side project for personal testing and educational use.
+### 🔗 LinkedIn
+
+-   ❤️ **Auto-Like Posts:** Automatically likes posts in the LinkedIn feed.
+-   👥 **Auto-Connect:** Sends connection requests to people.
+-   ➕ **Auto-Follow:** Follows profiles.
+-   💬 **Auto-Like Comments:** Likes comments on posts.
+
+### 📸 Instagram
+
+-   ❤️ **Auto-Like Posts:** Automatically likes posts in the Instagram feed.
 
 ---
 
 ## 📦 Installation
 
-### 1. Clone or Download
+### 1. Download the Extension
 
-```bash
-git clone [https://github.com/Nir-Bhay/linkedin-auto-extension.git](https://github.com/Nir-Bhay/linkedin-auto-extension.git)
+You can either clone this repository or download it as a ZIP file and extract it to a local folder.
 
-```
+### 2. Load as an Unpacked Extension in Chrome
 
-Or download the ZIP and extract it.
+1.  Open Chrome and navigate to `chrome://extensions/`.
+2.  Enable **Developer Mode** using the toggle switch in the top-right corner.
+3.  Click the **Load unpacked** button.
+4.  Select the folder where you cloned or extracted the extension files.
 
-### 2\. Load as Unpacked Extension in Chrome
+---
 
-1.  Open `chrome://extensions/`
+## 🚀 How to Use
 
-2.  Enable **Developer Mode**
+1.  Navigate to either **LinkedIn** or **Instagram**.
+2.  Click the extension icon in your browser's toolbar to open the popup.
+3.  In the popup, select the platform you are currently on (LinkedIn or Instagram).
+4.  Configure the settings, such as the daily like limit and the speed of the automation.
+5.  Click the **Start** button to begin the automation.
 
-3.  Click **Load unpacked**
+The extension will now perform the selected actions on the current page. You can **Pause** or **Stop** the extension at any time from the popup.
 
-4.  Select the extracted project folder
+---
 
-* * * * *
-
-🚀 How to Use
--------------
-
-1.  Open LinkedIn or Instagram
-
-2.  Click the extension icon
-
-It will begin auto-actions (likes, connects, follows, etc.) based on the active page.
-
-You can control behaviors by editing the script logic inside `/content.js` or equivalent action files.
-
-* * * * *
-
-📁 Project Structure
---------------------
+## 📁 Project Structure
 
 ```
-linkedin-auto-extension/
+.
 ├── manifest.json
 ├── background.js
-├── content.js
+├── content-linkedin.js
+├── content-instagram.js
 ├── popup.html
 ├── popup.js
+├── options.html
+├── options.js
 ├── styles.css
-
+└── icons/
 ```
 
--   `content.js` -- Runs scripts on LinkedIn/Instagram pages
+-   `manifest.json`: Defines the extension's permissions and structure.
+-   `background.js`: The service worker for the extension, managing background tasks.
+-   `content-linkedin.js`: The content script that runs on LinkedIn pages.
+-   `content-instagram.js`: The content script that runs on Instagram pages.
+-   `popup.html` & `popup.js`: The UI and logic for the extension's popup.
+-   `options.html` & `options.js`: The UI and logic for the extension's settings page.
 
--   `popup.js` -- UI logic (optional)
+---
 
--   `manifest.json` -- Defines extension permissions and structure
+## ⚠️ Disclaimer
 
-* * * * *
+-   This extension is built for educational purposes only.
+-   Using automation tools on social media platforms may violate their terms of service.
+-   The developers of this extension are not responsible for any misuse or any issues with your social media accounts.
 
-📹 Demo
--------
+---
 
-🎥 Watch the working demo here: [Demo Video Link]
+## 📄 License
 
-(Replace with actual video link or upload on GitHub/GDrive/YouTube)
-
-* * * * *
-
-⚠️ Disclaimer
--------------
-
--   This extension is built only for educational purposes
-
--   It's been tested on demo/test accounts only
-
--   Using it on real accounts may violate LinkedIn or Instagram's terms of service
-
--   I do not take responsibility for misuse or or account issues
-
-* * * * *
-
-🙌 Feedback & Contributions
----------------------------
-
-Want to improve it, fork it, or suggest ideas? Open an issue or DM me on LinkedIn
-
-* * * * *
-
-📄 License
-----------
-
-MIT License. Do whatever you want with it, just don't be evil.
-
-Made with 💻 by @Nir-Bhay
+This project is licensed under the MIT License.
